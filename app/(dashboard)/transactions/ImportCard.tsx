@@ -363,24 +363,6 @@ export default function ImportCard({
                     </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                    {validationResult && (
-                        <div className="space-y-2">
-                            {validationResult.errors.length > 0 && (
-                                <Alert variant="destructive">
-                                    <AlertDescription>
-                                        <div className="space-y-1">
-                                            <p className="font-medium">Validation Errors:</p>
-                                            <ul className="list-disc list-inside space-y-1">
-                                                {validationResult.errors.map((error, index) => (
-                                                    <li key={index} className="text-sm">{error}</li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    </AlertDescription>
-                                </Alert>
-                            )}
-                        </div>
-                    )}
                     
                     <ImportTable
                         headers={headers}
