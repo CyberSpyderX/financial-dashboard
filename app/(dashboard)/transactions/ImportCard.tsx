@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Alert, AlertDescription } from "@/components/ui/alert";
 import ImportTable from "./ImportTable";
 import { useState } from "react";
 import { convertAmountToMiliUnits } from "@/lib/utils";
@@ -374,21 +373,6 @@ export default function ImportCard({
                                             <ul className="list-disc list-inside space-y-1">
                                                 {validationResult.errors.map((error, index) => (
                                                     <li key={index} className="text-sm">{error}</li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    </AlertDescription>
-                                </Alert>
-                            )}
-                            
-                            {validationResult.warnings.length > 0 && (
-                                <Alert>
-                                    <AlertDescription>
-                                        <div className="space-y-1">
-                                            <p className="font-medium">Warnings:</p>
-                                            <ul className="list-disc list-inside space-y-1">
-                                                {validationResult.warnings.map((warning, index) => (
-                                                    <li key={index} className="text-sm">{warning}</li>
                                                 ))}
                                             </ul>
                                         </div>
